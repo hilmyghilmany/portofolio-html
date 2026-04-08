@@ -1,5 +1,6 @@
 const EDUCATION_DATA = [
 	{
+		status: "active",
 		school: "MAN 1 Gresik",
 		year: "2017 - 2020",
 		degree: "High School Education",
@@ -7,6 +8,7 @@ const EDUCATION_DATA = [
 			"I learned the fundamental concepts of life that laid the foundation for both my personal and academic growth. This included critical thinking, problem-solving skills, and a strong understanding of the world around me. It was here that I developed a curiosity for technology and innovation.",
 	},
 	{
+		status: "active",
 		school: "UIN Maulana Malik Ibrahim Malang",
 		year: "2020 - 2024",
 		degree: "Bachelor of Informatics Engineering",
@@ -17,6 +19,7 @@ const EDUCATION_DATA = [
 
 const EXPERIENCE_DATA = [
 	{
+		status: "active",
 		company: "Trojan Production",
 		year: "2022 - Present",
 		role: "Lighting Designer",
@@ -24,6 +27,7 @@ const EXPERIENCE_DATA = [
 			"Arrange the crew to set up the lighting in the appropriate locations, as well as arrange the lighting design to enhance the beauty of the event. Operate the lighting console to ensure it aligns with the desired emotions or atmosphere by changing colors and manipulating specific effects.",
 	},
 	{
+		status: "inactive",
 		company: "Just Tech Smart 2",
 		year: "2023 - 2023",
 		role: "Frontend Web Developer",
@@ -31,6 +35,7 @@ const EXPERIENCE_DATA = [
 			"Create a website according to the design available in Figma, then implement it into a website using the Laravel framework and PHP programming language.",
 	},
 	{
+		status: "active",
 		company: "HLA12 Studio",
 		year: "2024 - Present",
 		role: "Frontend Web Developer",
@@ -41,106 +46,139 @@ const EXPERIENCE_DATA = [
 
 const PORTFOLIO_DATA = [
 	{
+		status: "inactive",
 		category: "web developer",
 		image: "img/arbitech.webp",
 		image2: "img/arbitech2.webp",
+		url: "",
 		title: "Arbitech",
 		description:
 			"Designed and built a responsive company website aligned with brand guidelines and usability goals.",
 	},
 	{
+		status: "active",
 		category: "web developer",
 		image: "img/justtech.webp",
 		image2: "img/justtech2.webp",
+		url: "",
 		title: "Just Tech Smart 2",
 		description:
 			"Implemented modern frontend pages from design files with clean structure and consistent interactions.",
 	},
 	{
+		status: "active",
 		category: "web developer",
 		image: "img/tigerpepe.webp",
+		url: "",
 		title: "Tiger Pepe",
 		description:
 			"Delivered a clear promotional landing page focused on fast comprehension and mobile-first readability.",
 	},
 	{
+		status: "active",
 		category: "web developer",
 		image: "img/sdnsekarpuro.webp",
+		url: "",
 		title: "SDN Sekarpuro",
 		description:
 			"Built a school information website during KKN to improve public communication and digital presence.",
 	},
 	{
+		status: "active",
 		category: "web developer",
 		image: "img/masterclasssaham.webp",
+		url: "https://www.masterclasssaham.com",
 		title: "Masterclass Saham",
 		description:
 			"Enhanced WordPress frontend components and integrated Xendit payment flow for reliable transactions.",
 	},
 	{
+		status: "active",
 		category: "web developer",
 		image: "img/sewakantorcbd.webp",
+		url: "https://www.sewakantorcbd.com",
 		title: "SewakantorCBD",
 		description:
 			"Optimized page performance to reduce load times and improve overall browsing experience.",
 	},
 	{
+		status: "active",
 		category: "web developer",
 		image: "img/pdaja.webp",
+		url: "https://www.pdaja.com",
 		title: "PDaja Bank Sampoerna",
 		description:
 			"Contributed to platform revamp by improving backend form workflows and integrating updated frontend modules.",
 	},
+
 	{
+		status: "active",
 		category: "lighting designer",
 		image: "img/muspar.webp",
+		url: "",
 		title: "Musik Parkir 2024",
 		description:
 			"Created stage lighting concepts and live cues for a high-energy campus music showcase.",
 	},
 	{
+		status: "active",
 		category: "lighting designer",
 		image: "img/accountingfest.webp",
+		url: "",
 		title: "Accounting Fest Polinema 2024",
 		description:
 			"Designed visual lighting sequences for a major annual student festival with guest performers.",
 	},
 	{
+		status: "active",
 		category: "lighting designer",
 		image: "img/TDOK.webp",
+		url: "",
 		title: "The Day of Kommust",
 		description:
 			"Handled show lighting for Kommust’s anniversary event, balancing atmosphere and stage visibility.",
 	},
 	{
+		status: "active",
 		category: "lighting designer",
 		image: "img/standup.webp",
+		url: "",
 		title: "Stand Up Comedy",
 		description:
 			"Programmed focused cue transitions for comedy performances to support timing and audience engagement.",
 	},
 	{
+		status: "active",
 		category: "lighting designer",
 		image: "img/kommuststage.webp",
+		url: "",
 		title: "Kommust Stage 2",
 		description:
 			"Produced dynamic concert lighting for a student-organized live music event featuring local artists.",
 	},
 	{
+		status: "active",
 		category: "lighting designer",
 		image: "img/partilibur.webp",
+		url: "",
 		title: "Parti Libur Lumajang",
 		description:
 			"Executed concert lighting operations for multi-act performances, including guest national talent.",
 	},
 	{
+		status: "active",
 		category: "lighting designer",
 		image: "img/malangmods.webp",
+		url: "",
 		title: "Malang Mods",
 		description:
 			"Delivered event lighting design for the annual Malang Mods stage featuring nationally recognized acts.",
 	},
 ];
+
+function isDataActive(item) {
+	return (item.status || "active").toLowerCase() === "active";
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 	renderSectionData();
@@ -164,7 +202,7 @@ function renderSectionData() {
 	const portfolioGrid = document.getElementById("portfolioGrid");
 
 	if (educationTimeline) {
-		educationTimeline.innerHTML = EDUCATION_DATA.map(
+		educationTimeline.innerHTML = EDUCATION_DATA.filter(isDataActive).map(
 			(item, index) => `
 				<article class="timeline-item education-item" data-aos="fade-up" data-aos-delay="${index * 100}">
 					<div class="timeline-left edu-left">
@@ -182,7 +220,7 @@ function renderSectionData() {
 	}
 
 	if (experienceTimeline) {
-		experienceTimeline.innerHTML = EXPERIENCE_DATA.map(
+		experienceTimeline.innerHTML = EXPERIENCE_DATA.filter(isDataActive).map(
 			(item, index) => `
 				<article class="timeline-item experience-item" data-aos="fade-up" data-aos-delay="${index * 100}">
 					<div class="timeline-left exp-left">
@@ -200,14 +238,23 @@ function renderSectionData() {
 	}
 
 	if (portfolioGrid) {
-		portfolioGrid.innerHTML = PORTFOLIO_DATA.map((item) => {
+		portfolioGrid.innerHTML = PORTFOLIO_DATA.filter(isDataActive).map((item) => {
 			const categoryLabel = item.category.toUpperCase();
 			const image2 = item.image2 ? `data-image2="${item.image2}"` : "";
+			const hasUrl = Boolean(item.url && item.url.trim());
+			const linkButton = hasUrl
+				? `<a class="icon portfolio-link-btn" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="Go to ${item.title}"><i class="fas fa-arrow-up-right-from-square"></i></a>`
+				: "";
 
 			return `
 				<div class="portfolio-item" data-category="${item.category}" ${image2}>
 					<img src="${item.image}" alt="${item.title}" />
-					<div class="hover-overlay"><i class="fas fa-eye icon"></i></div>
+					<div class="hover-overlay">
+						<button class="icon view-image-btn" type="button" aria-label="View image ${item.title}">
+							<i class="fas fa-eye"></i>
+						</button>
+						${linkButton}
+					</div>
 					<div class="content">
 						<div class="category">${categoryLabel}</div>
 						<h3>${item.title}</h3>
@@ -339,7 +386,7 @@ function initPortfolioModal() {
 
 	const modalImages = modal.querySelector(".modal-images");
 	const closeButton = modal.querySelector(".close");
-	const viewButtons = document.querySelectorAll(".hover-overlay .icon");
+	const viewButtons = document.querySelectorAll(".hover-overlay .view-image-btn");
 	if (!modalImages || !closeButton || !viewButtons.length) return;
 
 	const closeModal = () => {
