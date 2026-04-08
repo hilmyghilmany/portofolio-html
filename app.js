@@ -21,15 +21,15 @@ const EXPERIENCE_DATA = [
 	{
 		status: "active",
 		company: "Trojan Production",
-		year: "2022 - Present",
+		year: "Oct 2022 - Present",
 		role: "Lighting Designer",
 		detail:
 			"Arrange the crew to set up the lighting in the appropriate locations, as well as arrange the lighting design to enhance the beauty of the event. Operate the lighting console to ensure it aligns with the desired emotions or atmosphere by changing colors and manipulating specific effects.",
 	},
 	{
-		status: "inactive",
+		status: "active",
 		company: "Just Tech Smart 2",
-		year: "2023 - 2023",
+		year: "Jun 2023 - Jul 2023",
 		role: "Frontend Web Developer",
 		detail:
 			"Create a website according to the design available in Figma, then implement it into a website using the Laravel framework and PHP programming language.",
@@ -37,10 +37,18 @@ const EXPERIENCE_DATA = [
 	{
 		status: "active",
 		company: "HLA12 Studio",
-		year: "2024 - Present",
+		year: "Nov 2023 - Jun 2024",
 		role: "Frontend Web Developer",
 		detail:
 			"Develop the Xendit payment gateway feature on WordPress for the Masterclass Saham website, improve performance on the Sewakantorcbd website to ensure faster and more efficient loading times, and carry out the website revamp project for PDaja Bank Sampoerna to create a more polished and user-friendly design.",
+	},
+	{
+		status: "active",
+		company: "Repository Solusi Indonesia",
+		year: "Jul 2024 - Present",
+		role: "Web Developer",
+		detail:
+			"Design and build responsive websites for various clients, ensuring alignment with brand guidelines and usability goals. Implement modern frontend pages from design files with clean structure and consistent interactions. Optimize page performance to reduce load times and improve overall browsing experience.",
 	},
 ];
 
