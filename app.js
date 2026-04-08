@@ -201,6 +201,15 @@ const PORTFOLIO_DATA = [
 		description:
 			"Delivered event lighting design for the annual Malang Mods stage featuring nationally recognized acts.",
 	},
+	{
+		status: "active",
+		category: "lighting designer",
+		image: "img/danilla.jpg",
+		url: "",
+		title: "Jambore Jazz Kampus",
+		description:
+			"Designing and operatoring lighting in Jambore Jazz Kampus Malang with artist Danilla.",
+	}
 ];
 
 function isDataActive(item) {
