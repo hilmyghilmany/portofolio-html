@@ -1386,7 +1386,7 @@ body {
 .categories button.active,
 .categories button:hover {
 	background: var(--primary);
-	color: #fff;
+	color: #000;
 	border-color: rgba(255, 255, 255, 0.25);
 	box-shadow: 0 12px 24px rgba(122, 105, 255, 0.35);
 }
@@ -1886,7 +1886,7 @@ html[data-theme="light"] .categories button {
 
 html[data-theme="light"] .categories button.active,
 html[data-theme="light"] .categories button:hover {
-	color: #fff;
+	color: #000;
 }
 
 html[data-theme="light"] .footer {

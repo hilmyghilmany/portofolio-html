@@ -110,6 +110,33 @@ const PORTFOLIO_DATA = [
 		description:
 			"Contributed to platform revamp by improving backend form workflows and integrating updated frontend modules.",
 	},
+	{
+		status: "active",
+		category: "web developer",
+		image: "img/totalenviro.png",
+		url: "https://cms.pelatihanbnsp.id/auth/login",
+		title: "CMS Total Enviro",
+		description:
+			"Built a CMS for Total Enviro Solusindo using Next.js to manage users enrolled in BNSP training and their certificates.",
+	},
+	{
+		status: "active",
+		category: "web developer",
+		image: "img/topupid.png",
+		url: "https://topup.id",
+		title: "Topup.id",
+		description:
+			"Built Topup.id client and admin frontends with Next.js for game top-up transactions.",
+	},
+	{
+		status: "active",
+		category: "web developer",
+		image: "img/mokos.png",
+		url: "https://mokos.id",
+		title: "Mokos",
+		description:
+			"Built a website to promote kost properties and improve online visibility.",
+	},
 
 	{
 		status: "active",
