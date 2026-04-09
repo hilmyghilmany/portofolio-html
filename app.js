@@ -145,6 +145,15 @@ const PORTFOLIO_DATA = [
 		description:
 			"Built a website to promote kost properties and improve online visibility.",
 	},
+	{
+		status: "active",
+		category: "web developer",
+		image: "img/memberremora.png",
+		url: "https://member.remoratrader.id/login",
+		title: "Member Remora",
+		description:
+			"Developed platform to view trader learning videos for Remora Trader membership",
+	},
 
 	{
 		status: "active",
